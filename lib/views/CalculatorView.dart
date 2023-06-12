@@ -31,12 +31,13 @@ class _CalculatorViewState extends State<CalculatorView> {
         backgroundColor: isDarkMode ? Colors.blueGrey : Colors.white,
       ),
       body: Container(
-        color: isDarkMode ? Color.fromARGB(255, 46, 46, 46) : Colors.white,
+        color:
+            isDarkMode ? const Color.fromARGB(255, 46, 46, 46) : Colors.white,
         child: Column(
           children: <Widget>[
             Container(
               alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 vertical: 24.0,
                 horizontal: 12.0,
               ),
@@ -106,11 +107,11 @@ class _CalculatorViewState extends State<CalculatorView> {
                     buildButton("=", Colors.green),
                   ],
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 ElevatedButton(
                   child: Text(
                     isDarkMode ? "Mode Blanc" : "Mode Sombre",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -129,17 +130,18 @@ class _CalculatorViewState extends State<CalculatorView> {
     );
   }
 
+  // Méthode pour construire un bouton dans l'interface utilisateur
   Widget buildButton(String buttonText, Color color) {
     return Expanded(
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          padding: EdgeInsets.all(24.0),
-          side: BorderSide(width: 2, color: Colors.white),
+          padding: const EdgeInsets.all(24.0),
+          // side: const BorderSide(width: 2, color: Colors.white),
           backgroundColor: color,
         ),
         child: Text(
           buttonText,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20.0,
             color: Colors.white,
             fontWeight: FontWeight.bold,
