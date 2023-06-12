@@ -23,7 +23,6 @@ class CalculatorModel {
       _previousCalculation += "$num1 $operand ";
     } else if (buttonText == ".") {
       if (_output.contains(".")) {
-        print("Déjà contient un décimal");
         return _output;
       } else {
         _output = _output + buttonText;
