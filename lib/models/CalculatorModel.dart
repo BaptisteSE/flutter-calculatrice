@@ -48,7 +48,11 @@ class CalculatorModel {
       num2 = 0.0;
       operand = "";
     } else {
-      _output = _output + buttonText;
+      if (_output == "0") {
+        _output = buttonText;
+      } else {
+        _output = _output + buttonText;
+      }
     }
 
     return _output;
